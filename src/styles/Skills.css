@@ -1,0 +1,127 @@
+
+.skills-section {
+  padding: 110px 0;
+  background: #fafaf8;
+}
+
+.skills-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin: 35px 0 55px;
+}
+
+.skills-heading h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  letter-spacing: -2px;
+}
+
+.skills-heading h2 span {
+  color: #a99bea;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+.skills-heading p {
+  max-width: 330px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 30px;
+  border: 1px solid #e9e7e1;
+  border-radius: 10px;
+  background: #fff;
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #c5b8f2;
+  box-shadow: 0 12px 30px rgba(32, 33, 36, 0.05);
+}
+
+.skill-number {
+  color: #a99bea;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.skill-card h3 {
+  margin-top: 24px;
+  font-size: 19px;
+  line-height: 1.4;
+  color: #202124;
+}
+
+.skill-card > p {
+  margin-top: 9px;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.skill-tags span {
+  padding: 9px 12px;
+  border: 1px solid #eae8e3;
+  border-radius: 25px;
+  color: #555;
+  background: #fafaf8;
+  font-size: 11px;
+  transition: 0.2s ease;
+}
+
+.skill-tags span:hover {
+  background: #f1edff;
+  border-color: #c5b8f2;
+  color: #55458f;
+}
+
+@media (max-width: 950px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-section {
+    padding: 75px 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skills-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  .skill-card {
+    min-height: auto;
+    padding: 26px;
+  }
+}

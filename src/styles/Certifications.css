@@ -1,0 +1,135 @@
+
+.certifications-section {
+  padding: 100px 0;
+  background: #FAFAF8;
+}
+
+.certifications-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.certifications-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  max-width: 600px;
+}
+
+.certifications-heading h2 span {
+  color: #A99BEA;
+}
+
+.certifications-heading > p {
+  max-width: 300px;
+  color: #777;
+  line-height: 1.7;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.certificate-card {
+  background: #fff;
+  border: 1px solid #eae8e3;
+  padding: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(32, 33, 36, 0.07);
+}
+
+.certificate-preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1.414 / 1;
+  overflow: hidden;
+  background: #f1eff8;
+}
+
+.certificate-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(32, 33, 36, 0.65);
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.certificate-preview:hover .preview-overlay {
+  opacity: 1;
+}
+
+.certificate-info {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px 5px 14px;
+}
+
+.certificate-number {
+  color: #A99BEA;
+  font-size: 0.85rem;
+}
+
+.certificate-info h3 {
+  font-size: 1rem;
+  color: #202124;
+  margin-bottom: 7px;
+}
+
+.certificate-info p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.certificate-link {
+  display: inline-block;
+  margin: 0 5px 8px 37px;
+  color: #202124;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.certificate-link:hover {
+  color: #A99BEA;
+}
+
+@media (max-width: 700px) {
+  .certifications-section {
+    padding: 70px 0;
+  }
+
+  .certifications-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

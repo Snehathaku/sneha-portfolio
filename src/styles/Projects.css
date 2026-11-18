@@ -1,0 +1,149 @@
+
+.projects-section {
+  padding: 110px 0;
+  background: #f2f0eb;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 35px 0 55px;
+}
+
+.projects-heading h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  letter-spacing: -2px;
+}
+
+.projects-heading h2 span {
+  color: #a99bea;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.projects-heading > p {
+  max-width: 330px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e9e7e1;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-visual {
+  height: 240px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eae6f5;
+  color: #7969b5;
+}
+
+.project-card:nth-child(2) .project-visual {
+  background: #f5e9eb;
+  color: #b17e90;
+}
+
+.project-card:nth-child(3) .project-visual {
+  background: #e6eeeb;
+  color: #638b7b;
+}
+
+.project-card:nth-child(4) .project-visual {
+  background: #e8edf5;
+  color: #7188ad;
+}
+
+.project-visual > span:first-child {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.project-symbol {
+  font-size: 85px;
+  font-family: 'Playfair Display', serif;
+}
+
+.project-type {
+  align-self: flex-end;
+  font-size: 11px;
+}
+
+.project-info {
+  padding: 28px;
+}
+
+.project-category {
+  color: #9986d5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.project-info h3 {
+  margin-top: 13px;
+  font-size: 22px;
+}
+
+.project-description {
+  margin-top: 12px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.project-tags span {
+  padding: 7px 11px;
+  border: 1px solid #e9e7e1;
+  border-radius: 20px;
+  color: #666;
+  font-size: 10px;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-top: 17px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
